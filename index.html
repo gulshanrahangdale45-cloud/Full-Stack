@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <div class="form-box">
+    <h1>Welcome!!!!!</h1>
+    
+    <form action="/register" method="POST" enctype="multipart/form-data">
+        <fieldset>
+            <legend>Register</legend>
+
+            <label for="name">Full Name</label>
+            <input  type="text" id="name" name="Full Name" required minlength="3">
+
+             <label for="phone">Phone No.</label>
+             <input type="tel" id="Phone" pattern="(0-9){10}" title="Enter a 10 Digit Number" required>
+
+        </fieldset>
+
+    
+        <fieldset>
+            <legend>Gender</legend>
+            <input type="radio" id="m" name="gender" value="male">
+            <label for="m">male</label>
+            <input type="radio" id="f" name="gender" value="female">
+            <label for="f">Female</label>      
+          </fieldset>
+
+        <label for="course">course</label>
+        <select id="course" name="course" required>
+            <option value="">..Select ..</option>
+            <option value="frontend">Frontend</option>
+            <option value="Backend">Backend</option>
+            <option value="AI Engineer">AI Engineer</option>
+            <option value="ML Engineer">ML Engineer</option>
+            <option value="Data Science">Data Science</option>
+        </select>
+
+        <input type="file" id="cv" name="resume" accepted=".pdf">
+
+        <input type="checkbox" id="terms" name="terms" value="accepted" required>
+        <label for="term">I accept the terms</label>
+
+        <button type="Submit">Register</button>
+
+    </form>
+   </div>
+    
+   
+</body>
+</html>
